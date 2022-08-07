@@ -243,8 +243,8 @@ m', 'first_name': 'Holberton', 'updated_at': datetime.datetime(2019, 2, 17, 21,
 ## Testing 📏
 Unittests for the AirBnB_clone project are defined in the tests folder. To run the entire test suite simultaneously, execute the following command:
 
-<$ python3 unittest -m discover tests
+<$ python3 unittest -m discover tests>
 
 Alternatively, you can specify a single test file to run at a time:
 
-$ python3 unittest -m tests/test_console.py>
+<$ python3 unittest -m tests/test_console.py>
