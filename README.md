@@ -221,7 +221,6 @@ key/value attribute pair, only "simple" attributes can be updated (ie. not
 `id`, `created_at`, and `updated_at`). However, any attribute can be updated by
 providing a dictionary.
 
-```html
 ## Authors
 
 The project has been authored by individuals in [AUTHORS](./AUTHORS)
