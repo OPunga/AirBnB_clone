@@ -222,24 +222,6 @@ key/value attribute pair, only "simple" attributes can be updated (ie. not
 providing a dictionary.
 
 ```html
-$ ./console.py
-(hbnb) create User
-03c69f4e-f2c4-4e84-92b6-665d90cec0ba
-(hbnb)
-(hbnb) update User 03c69f4e-f2c4-4e84-92b6-665d90cec0ba last_name "Blaq"
-(hbnb) show User ['type'] 03c69f4e-f2c4-4e84-92b6-665d90cec0ba {'id': '03c69f4e-f2c4-4e84-92b6-665d90cec0ba', 'created_at': datetime.datetime(2022, 8, 6, 22, 43, 24, 238977), 'updated_at': datetime.datetime(2022, 8, 6, 22, 43, 24, 238977), 'last_name': 'Blaq'}
-(hbnb)
-(hbnb) User.update(6f348019-0499-420f-8eec-ef0fdc863c02, address, "98 Mission S
-t")
-(hbnb) User.show(30d57c4d-bc9c-4542-8b7b-6e4da8364640)
-['type'] 30d57c4d-bc9c-4542-8b7b-6e4da8364640 {'id': '30d57c4d-bc9c-4542-8b7b-6e4da8364640', 'created_at': datetime.datetime(2022, 8, 6, 21, 37, 9, 970882), 'updated_at': datetime.datetime(2022, 8, 6, 21, 37, 9, 970882)}
-(hbnb)
-(hbnb) (hbnb) User.update(03c69f4e-f2c4-4e84-92b6-665d90cec0ba, email "blaq@hackersploit.or")
-(hbnb)User.show(03c69f4e-f2c4-4e84-92b6-665d90cec0ba)
-['type'] 03c69f4e-f2c4-4e84-92b6-665d90cec0ba {'id': '03c69f4e-f2c4-4e84-92b6-665d90cec0ba', 'created_at': datetime.datetime(2022, 8, 6, 22, 43, 24, 238977), 'updated_at': datetime.datetime(2022, 8, 6, 22, 43, 24, 238977), 'last_name': 'Blaq', 'email': 'blaq@hackersploit.or'}
-(hbnb) 
-```
-
 ## Authors
 
 The project has been authored by individuals in [AUTHORS](./AUTHORS)
