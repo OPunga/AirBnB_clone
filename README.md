@@ -65,54 +65,54 @@ List of commands this console current supports:
 * `all` - Prints all string representation of all instances based or not on the class name. 
 * `update` - Updates an instance based on the class name and id by adding or updating attribute (save the change into the JSON file).
 
-'$ echo "help" | ./console.py
+<$ echo "help" | ./console.py
 (hbnb) 
-Documented commands (type help <topic>):
+Documented commands (type help <topic>):>
 ========================================
-'EOF  all  count  create  destroy  help  quit  show  update
+<EOF  all  count  create  destroy  help  quit  show  update
 
 (hbnb) 
 $
 Alternatively, to use the AirBnB_clone console in interactive mode, run the file console.py by itself:
 
-$ ./console.py'
+$ ./console.py>
 
 While running in interactive mode, the console displays a prompt for input:
 
-'$ ./console.py
-(hbnb)'
+<$ ./console.py
+(hbnb)
  
 To quit the console, enter the command quit, or input an EOF signal (ctrl-D).
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) quit
 $'
 
 '$ ./console.py
 (hbnb) EOF
-$'
+$>
 
 ### Console Commands
 The AirBnB console supports the following commands:
 
-* create
+#### * create
 	- Usage: create <class>
 Creates a new instance of a given class. The class' ID is printed and the instance is saved to the file file.json.
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) create BaseModel
 119be863-6fe5-437e-a180-b9892e8746b8
 (hbnb) quit
 $ cat file.json ; echo ""
 {"BaseModel.119be863-6fe5-437e-a180-b9892e8746b8": {"updated_at": "2019-02-17T2
 1:30:42.215277", "created_at": "2019-02-17T21:30:42.215277", "__class__": "Base
-Model", "id": "119be863-6fe5-437e-a180-b9892e8746b8"}}'
+Model", "id": "119be863-6fe5-437e-a180-b9892e8746b8"}}>
 
-* show
+#### * show
 	- Usage: show <class> <id> or <class>.show(<id>)
 Prints the string representation of a class instance based on a given id.
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) create User
 1e32232d-5a63-4d92-8092-ac3240b29f46
 (hbnb)
@@ -125,14 +125,14 @@ c3240b29f46', 'created_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828),
 [User] (1e32232d-5a63-4d92-8092-ac3240b29f46) {'id': '1e32232d-5a63-4d92-8092-a
 c3240b29f46', 'created_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828), 
 'updated_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828)}
-(hbnb)'
+(hbnb)>
  
-* destroy
+#### * destroy
 	- Usage: destroy <class> <id> or <class>.destroy(<id>)
 
 Deletes a class instance based on a given id. The storage file file.json is updated accordingly.
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) create State
 d2d789cd-7427-4920-aaae-88cbcf8bffe2
 (hbnb) create Place
@@ -142,13 +142,13 @@ d2d789cd-7427-4920-aaae-88cbcf8bffe2
 (hbnb) Place.destroy(03486a3e-8329-4f47-9947-dca80c03d3ed)
 (hbnb) quit
 $ cat file.json ; echo ""
-{}'
+{}>
 
-* all
+#### * all
 	- Usage: all or all <class> or <class>.all()
 Prints the string representations of all instances of a given class. If no class name is provided, the command prints all instances of every class.
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) create BaseModel
 fce2124c-8537-489b-956e-22da455cbee8
 (hbnb) create BaseModel
@@ -187,13 +187,13 @@ c3-f4bf-425e-b1d4-165f52c6ff81) {'updated_at': datetime.datetime(2019, 2, 17, 2
 537-489b-956e-22da455cbee8) {'updated_at': datetime.datetime(2019, 2, 17, 21, 4
 3, 56, 899348), 'created_at': datetime.datetime(2019, 2, 17, 21, 43, 56, 899348
 ), 'id': 'fce2124c-8537-489b-956e-22da455cbee8'}"]
-(hbnb)'
+(hbnb)>
  
-* count
+#### * count
 	- Usage: count <class> or <class>.count()
 Retrieves the number of instances of a given class.
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) create Place
 12c73223-f3d3-4dec-9629-bd19c8fadd8a
 (hbnb) create Place
@@ -205,14 +205,14 @@ aa229cbb-5b19-4c32-8562-f90a3437d301
 2
 (hbnb) city.count()
 1
-(hbnb)'
+(hbnb)>
  
-* update
-	- Usage: update <class> <id> <attribute name> "<attribute value>" or <class>.update(<id>, <attribute name>, <attribute value>) or <class>.update( <id>, <attribute dictionary>).'
+#### * update
+	- Usage: update <class> <id> <attribute name> "<attribute value>" or <class>.update(<id>, <attribute name>, <attribute value>) or <class>.update( <id>, <attribute dictionary>).
 
 Updates a class instance based on a given id with a given key/value attribute pair or dictionary of attribute pairs. If update is called with a single key/value attribute pair, only "simple" attributes can be updated (ie. not id, created_at, and updated_at). However, any attribute can be updated by providing a dictionary.
 
-'$ ./console.py
+<$ ./console.py
 (hbnb) create User
 6f348019-0499-420f-8eec-ef0fdc863c02
 (hbnb)
@@ -238,13 +238,13 @@ m', 'first_name': 'Holberton', 'updated_at': datetime.datetime(2019, 2, 17, 21,
 54, 39, 234382), 'address': '98 Mission St', 'last_name': 'School', 'id': '6f34
 8019-0499-420f-8eec-ef0fdc863c02', 'created_at': datetime.datetime(2019, 2, 17,
 21, 54, 39, 234382)}
-(hbnb)'
+(hbnb)>
  
 ## Testing 📏
 Unittests for the AirBnB_clone project are defined in the tests folder. To run the entire test suite simultaneously, execute the following command:
 
-'$ python3 unittest -m discover tests'
+<$ python3 unittest -m discover tests
 
 Alternatively, you can specify a single test file to run at a time:
 
-'$ python3 unittest -m tests/test_console.py'
+$ python3 unittest -m tests/test_console.py>
