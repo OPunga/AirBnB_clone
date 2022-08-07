@@ -132,7 +132,7 @@ c3240b29f46', 'created_at': datetime.datetime(2019, 2, 17, 21, 34, 3, 635828),
 
 Deletes a class instance based on a given id. The storage file file.json is updated accordingly.
 
-<$ ./console.py
+* '$ ./console.py
 (hbnb) create State
 d2d789cd-7427-4920-aaae-88cbcf8bffe2
 (hbnb) create Place
@@ -142,7 +142,7 @@ d2d789cd-7427-4920-aaae-88cbcf8bffe2
 (hbnb) Place.destroy(03486a3e-8329-4f47-9947-dca80c03d3ed)
 (hbnb) quit
 $ cat file.json ; echo ""
-{}>
+{}'*
 
 #### * all
 	- Usage: all or all <class> or <class>.all()
